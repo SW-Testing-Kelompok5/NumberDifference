@@ -32,8 +32,8 @@ public class Screen {
 	public ArrayList<Integer> inputNumberListValue(int nBil) {
 		ArrayList<Integer> data = new ArrayList<Integer>();
 		Scanner inputInt = new Scanner(System.in);
-		int idx, bil;
-		
+		int idx;
+                int bil;
 		for(idx=0; idx < nBil; idx++) {
 			bil = inputInt.nextInt();
 			data.add(bil);

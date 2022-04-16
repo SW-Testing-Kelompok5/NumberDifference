@@ -87,18 +87,24 @@ public class NumberDifferenceTest {
 	public void testGroup2InRange() {
 		// (1) setup (arrange, build)
                 ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(5, 20));
-		
+		int jumlahDeretBil;
+                
                 // Expected Result
                 String expectedMessage = "Difference : 15\nGroup 2, Medium Difference";
                 Integer expectedDifference = 15;
+                boolean expected, actual;
+                jumlahDeretBil = 2;
+                expected = true;
                 
                 // Exercise
+                actual = sut.validateRangeInputMaxDeret(jumlahDeretBil);
                 Integer actualDifference = sut.numberDiffirenceProcess(testData);
                 String actualMessage = sut.groupingDifference(actualDifference);
                 		
 		// Verify Test
                 assertEquals(expectedDifference, actualDifference);
                 assertEquals(expectedMessage, actualMessage);
+                assertEquals(expected, actual);
 	}
         //Test Case 4 Path 2 
         //Inputkan 2 angka membentuk group 2 dibatas atas group 2 (50)
@@ -161,7 +167,7 @@ public class NumberDifferenceTest {
         @Test
 	public void testGroup1InRange() {
 		// (1) setup (arrange, build)
-                ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(2, 8));
+                ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(8, 2));
 		
                 // Expected Result
                 String expectedMessage = "Difference : 6\nGroup 1, Small Difference";
@@ -533,8 +539,7 @@ public class NumberDifferenceTest {
             assertEquals(expectedMessage, actualMessage);
 	}
 
-        //Test Case 25 Path 19  
-        //Input 10 angka yang memenuhi group 2
+        //Test Case 25 Path 19 : Input 10 angka yang memenuhi group 2
         //PIC : Muammad Syahid Abdurrahman
         @Test
         public void testGroup2NoDiff9Loop() {
@@ -558,8 +563,7 @@ public class NumberDifferenceTest {
             assertEquals(expectedMessage, actualMessage);
 	}
 
-        //Test Case 26 Path 20
-        //Input 10 angka yang memenuhi group 1
+        //Test Case 26 Path 20 : Input 10 angka yang memenuhi group 1
         //PIC : Muhammad Syahid Abdurraman
         @Test
         public void testGroup1DiffNo9Loop() {
@@ -583,8 +587,7 @@ public class NumberDifferenceTest {
             assertEquals(expectedMessage, actualMessage);
 	}
         
-        //Test Case 27 Path 21
-        //Input 10 angka yang memenuhi group 0   
+        //Test Case 27 Path 21 : Input 10 angka yang memenuhi group 0   
         //PIC : Muammad Syahid Abdurraman
         @Test
         public void testNonGroupNoDiff9Loop() {
@@ -608,4 +611,20 @@ public class NumberDifferenceTest {
             assertEquals(expectedMessage, actualMessage);
 	}
         
+        //Test Case 28 Path 25 : Input 11 angka yang memenuhi group 0  
+        //PIC : Muammad Syahid Abdurraman
+        @Test
+	public void testNonGroupMaksN() {
+		int jumlahDeretBil;
+		boolean actual, expected;
+                // Test Data = 11
+		jumlahDeretBil = 11;
+		expected = false;
+		
+		// (2) exercise (act, operate)
+		actual = sut.validateRangeInputMaxDeret(jumlahDeretBil);
+		
+		// (3) verify (assert, check)
+		assertEquals(expected, actual);
+	}
 }

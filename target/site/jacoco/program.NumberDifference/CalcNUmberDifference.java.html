@@ -11,21 +11,23 @@ import java.util.ArrayList;
 	// fungsi mengembalikan nilai selisih antara nilai terbesar dan terkecil
 	public int numberDiffirenceProcess(ArrayList&lt;Integer&gt; deretBil) {
 <span class="fc" id="L13">		int difference = 0;</span>
-		int min, max, idxDeretBil;
+		int min;
+                int max;
+                int idxDeretBil;
 		
-<span class="fc" id="L16">		min = deretBil.get(0);</span>
-<span class="fc" id="L17">		max = deretBil.get(0);</span>
+<span class="fc" id="L18">		min = deretBil.get(0);</span>
+<span class="fc" id="L19">		max = deretBil.get(0);</span>
 
-<span class="fc bfc" id="L19" title="All 2 branches covered.">		for (idxDeretBil = 1; idxDeretBil &lt; deretBil.size(); idxDeretBil++) { </span>
-<span class="pc bpc" id="L20" title="1 of 2 branches missed.">			if (deretBil.get(idxDeretBil) &lt; min)</span>
-<span class="nc" id="L21">				min = deretBil.get(idxDeretBil);</span>
-<span class="fc bfc" id="L22" title="All 2 branches covered.">			if (deretBil.get(idxDeretBil) &gt; max)</span>
-<span class="fc" id="L23">				max = deretBil.get(idxDeretBil);</span>
+<span class="fc bfc" id="L21" title="All 2 branches covered.">		for (idxDeretBil = 1; idxDeretBil &lt; deretBil.size(); idxDeretBil++) { </span>
+<span class="fc bfc" id="L22" title="All 2 branches covered.">			if (deretBil.get(idxDeretBil) &lt; min)</span>
+<span class="fc" id="L23">				min = deretBil.get(idxDeretBil);</span>
+<span class="fc bfc" id="L24" title="All 2 branches covered.">			if (deretBil.get(idxDeretBil) &gt; max)</span>
+<span class="fc" id="L25">				max = deretBil.get(idxDeretBil);</span>
 		}
 		
-<span class="fc" id="L26">		difference = max - min;</span>
+<span class="fc" id="L28">		difference = max - min;</span>
 		
-<span class="fc" id="L28">		return difference;</span>
+<span class="fc" id="L30">		return difference;</span>
 	}
 	
 	// fungsi mengembalikan jenis grup berdasarkan nilai selisih nilai terbesar dan terkecil
@@ -37,31 +39,32 @@ import java.util.ArrayList;
 		String message;
 		int group;
 		
-<span class="fc" id="L40">		message = &quot;Difference : &quot; + diff; </span>
-<span class="fc bfc" id="L41" title="All 2 branches covered.">		if(diff&gt;50) {</span>
-<span class="fc" id="L42">			group = 3;</span>
-<span class="pc bpc" id="L43" title="1 of 4 branches missed.">		}else if(diff&gt;=11 &amp;&amp; diff&lt;=50) { </span>
-<span class="fc" id="L44">			group = 2;</span>
-<span class="pc bpc" id="L45" title="1 of 4 branches missed.">		}else if(diff&gt;=1 &amp;&amp; diff&lt;=10){ </span>
-<span class="fc" id="L46">			group = 1;</span>
+<span class="fc" id="L42">		message = &quot;Difference : &quot; + diff; </span>
+<span class="fc bfc" id="L43" title="All 2 branches covered.">		if(diff&gt;50) {</span>
+<span class="fc" id="L44">			group = 3;</span>
+<span class="pc bpc" id="L45" title="1 of 4 branches missed.">		}else if(diff&gt;=11 &amp;&amp; diff&lt;=50) { </span>
+<span class="fc" id="L46">			group = 2;</span>
+<span class="pc bpc" id="L47" title="1 of 4 branches missed.">		}else if(diff&gt;=1 &amp;&amp; diff&lt;=10){ </span>
+<span class="fc" id="L48">			group = 1;</span>
 		}else {
-<span class="fc" id="L48">			group = 0;</span>
+<span class="fc" id="L50">			group = 0;</span>
 		}
 		
-<span class="fc bfc" id="L51" title="All 2 branches covered.">		if(group&gt;0){</span>
-<span class="fc" id="L52">			message = message + &quot;\nGroup &quot; + group + &quot;, &quot;;</span>
+<span class="fc bfc" id="L53" title="All 2 branches covered.">		if(group&gt;0){</span>
+<span class="fc" id="L54">			message = message + &quot;\nGroup &quot; + group + &quot;, &quot;;</span>
 		}else{
-<span class="fc" id="L54">			message = message + &quot;\nNon Group, &quot;;</span>
+<span class="fc" id="L56">			message = message + &quot;\nNon Group, &quot;;</span>
 		}
 		
-<span class="pc bpc" id="L57" title="1 of 5 branches missed.">		switch(group) {</span>
-<span class="fc" id="L58">			case 1: message = message + &quot;Small Difference&quot;; break;</span>
-<span class="fc" id="L59">			case 2: message = message + &quot;Medium Difference&quot;; break;</span>
-<span class="fc" id="L60">			case 3: message = message + &quot;Large Difference&quot;; break;</span>
-<span class="fc" id="L61">			case 0: message = message + &quot;There’s no difference&quot;; break;</span>
+<span class="pc bpc" id="L59" title="1 of 5 branches missed.">		switch(group) {</span>
+<span class="fc" id="L60">			case 1: message = message + &quot;Small Difference&quot;; break;</span>
+<span class="fc" id="L61">			case 2: message = message + &quot;Medium Difference&quot;; break;</span>
+<span class="fc" id="L62">			case 3: message = message + &quot;Large Difference&quot;; break;</span>
+<span class="fc" id="L63">			case 0: message = message + &quot;There’s no difference&quot;; break;</span>
+<span class="nc" id="L64">                        default: message = &quot;Error&quot;; break;</span>
 		}
 		
-<span class="fc" id="L64">		return message;</span>
+<span class="fc" id="L67">		return message;</span>
 	}
 	
 	// function validasi nilai N sesuai dengan range valid, yaitu N berada pada range 1-10
@@ -71,10 +74,10 @@ import java.util.ArrayList;
                 //Kesalahan code dimana seharusnya jika ingin masuk ke dalam range valid
                 //bilangan harus diatas 0  dan dibawah 11
               
-<span class="pc bpc" id="L74" title="1 of 4 branches missed.">		if(nBil&gt;=1 &amp;&amp; nBil&lt;=10) { </span>
-<span class="nc" id="L75">			return true;</span>
+<span class="fc bfc" id="L77" title="All 4 branches covered.">		if(nBil&gt;=1 &amp;&amp; nBil&lt;=10) { </span>
+<span class="fc" id="L78">			return true;</span>
 		}else {
-<span class="fc" id="L77">			return false;</span>
+<span class="fc" id="L80">			return false;</span>
 		}
 	}
 }

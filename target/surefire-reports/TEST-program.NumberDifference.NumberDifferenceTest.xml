@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="14" failures="0" name="program.NumberDifference.NumberDifferenceTest" time="0.033" errors="0" skipped="0">
+<testsuite tests="25" failures="0" name="program.NumberDifference.NumberDifferenceTest" time="0.055" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="16.0.1+9-24"/>
@@ -28,7 +28,7 @@
     <property name="classworlds.conf" value="C:\Program Files\apache-maven-3.8.5\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="sonar.login" value="6916fca71c0c075bbb9af59aa6ccebdc44002e26"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-16.0.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files (x86)\dotnet\;C:\Program Files\Java\jdk-16.0.1\bin;C:\Users\nabil\Documents\Tugas\Semester 6\Software Testing\sonar-scanner-4.7.0.2747-windows\bin;C:\Program Files\apache-maven-3.8.5\bin;C:\Users\nabil\AppData\Local\Microsoft\WindowsApps;C:\Users\nabil\AppData\Local\GitHubDesktop\bin;C:\Users\nabil\AppData\Local\atom\bin;C:\apache-maven-3.8.5\bin;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-16.0.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files (x86)\dotnet\;C:\Program Files\Java\jdk-16.0.1\bin;C:\Users\nabil\Documents\Tugas\Semester 6\Software Testing\sonar-scanner-4.7.0.2747-windows\bin;C:\Program Files\apache-maven-3.8.5\bin;C:\Users\nabil\AppData\Local\Microsoft\WindowsApps;C:\Users\nabil\AppData\Local\GitHubDesktop\bin;C:\Users\nabil\AppData\Local\atom\bin;C:\apache-maven-3.8.5\bin;;."/>
     <property name="maven.conf" value="C:\Program Files\apache-maven-3.8.5/conf"/>
     <property name="jdk.debug" value="release"/>
     <property name="java.class.version" value="60.0"/>
@@ -38,7 +38,7 @@
     <property name="library.jansi.path" value="C:\Program Files\apache-maven-3.8.5\lib\jansi-native"/>
     <property name="user.home" value="C:\Users\nabil"/>
     <property name="user.timezone" value="Asia/Jakarta"/>
-    <property name="sonar.host.url" value="http://localhost:9000"/>
+    <property name="sonar.host.url" value="http://localhost:9000/"/>
     <property name="file.encoding" value="Cp1252"/>
     <property name="java.specification.version" value="16"/>
     <property name="sonar.projectKey" value="NumberDifference"/>
@@ -46,7 +46,7 @@
     <property name="java.class.path" value="C:\Program Files\apache-maven-3.8.5\boot\plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="16"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean verify sonar:sonar \ -Dsonar.projectKey=NumberDifference \ -Dsonar.host.url=http://localhost:9000 \ -Dsonar.login=6916fca71c0c075bbb9af59aa6ccebdc44002e26"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean verify sonar:sonar \ -Dsonar.projectKey=NumberDifference \ -Dsonar.host.url=http://localhost:9000/ \ -Dsonar.login=6916fca71c0c075bbb9af59aa6ccebdc44002e26"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-16.0.1"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -63,18 +63,29 @@
     <property name="sun.stdout.encoding" value="cp437"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testGroup0" time="0.019"/>
+  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testGroup3NoDiff9Loop" time="0.046"/>
+  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testGroup0NoDiff2Loop" time="0"/>
+  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testGroup1DiffNo9Loop" time="0"/>
+  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testGroup3NoDiff3Loop" time="0"/>
+  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testGroup1NoDiff2Loop" time="0"/>
+  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testGroup2NoDiff3Loop" time="0"/>
+  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testGroup1NoDiff3Loop" time="0"/>
+  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testGroup0NoDiff3Loop" time="0"/>
+  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testGroup2NoDiff9Loop" time="0"/>
+  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testNonGroupNoDiff9Loop" time="0"/>
+  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testGroup3InRange" time="0.001"/>
+  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testGroup3MinRange" time="0.001"/>
   <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testGroup2InRange" time="0"/>
-  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testGroup2MinRange" time="0"/>
-  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testMinValidation" time="0"/>
   <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testGroup2MaxRange" time="0"/>
-  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testGroup1MinRange" time="0.006"/>
-  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testGroup1MaxRange" time="0"/>
-  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testGroup3MinRange" time="0"/>
-  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testMaksValidation" time="0.003"/>
-  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testGroup3InRange" time="0"/>
-  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testGroup1InRange" time="0"/>
-  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testNonGroupInput1" time="0.004"/>
-  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testGroup3Input3" time="0.001"/>
+  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testGroup2MinRange" time="0"/>
+  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testMaksValidation" time="0.004"/>
+  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testNonGroupInput1" time="0"/>
   <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testGroup3Input2" time="0"/>
+  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testGroup1MaxRange" time="0"/>
+  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testGroup1MinRange" time="0.001"/>
+  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testGroup0" time="0"/>
+  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testNonGroupMaksN" time="0.001"/>
+  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testGroup1InRange" time="0.001"/>
+  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testMinValidation" time="0"/>
+  <testcase classname="program.NumberDifference.NumberDifferenceTest" name="testGroup3Input3" time="0"/>
 </testsuite>
