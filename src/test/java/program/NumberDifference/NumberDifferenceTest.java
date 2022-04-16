@@ -28,6 +28,7 @@ public class NumberDifferenceTest {
         
         //Test Case 1 
         //Inputkan 2 angka membentuk group 3 dalam range
+        //PIC : Nabil Putra Hadiyani
         /*Test Data
             N = 2
             Number = 5 60
@@ -52,6 +53,7 @@ public class NumberDifferenceTest {
         
         //Test Case 2 Path 1 
         //Inputkan 2 angka membentuk group 3 dibatas bawah group 3 (51)
+        //PIC : Nabil Putra Hadiyani
         /*Test Data
             N = 2
             Number = 1 52
@@ -76,6 +78,7 @@ public class NumberDifferenceTest {
         
         //Test Case 3 Path 2 
         //Inputkan 2 angka membentuk group 2 dalam range
+        //PIC : Nabil Putra Hadiyani
         /*Test Data
             N = 2
             Number = 5 20
@@ -99,6 +102,7 @@ public class NumberDifferenceTest {
 	}
         //Test Case 4 Path 2 
         //Inputkan 2 angka membentuk group 2 dibatas atas group 2 (50)
+        //PIC : Nabil Putra Hadiyani
         /*Test Data
             N = 2
             Number = 5 55
@@ -124,6 +128,7 @@ public class NumberDifferenceTest {
         
         //Test Case 5 Path 2 
         //Inputkan 2 angka membentuk group 2 dibatas bawah range group 2 (11)
+        //PIC : Nabil Putra Hadiyani
         /*Test Data
             N = 2
             Number = 1 12
@@ -148,6 +153,7 @@ public class NumberDifferenceTest {
  
         //Test Case 6 Path 3 
         //Inputkan 2 angka membentuk group 1 dalam range
+        //PIC : Nabil Putra Hadiyani
         /*Test Data
             N = 2
             Number = 2 8
@@ -172,6 +178,7 @@ public class NumberDifferenceTest {
         
         //Test Case 7 Path 3 
         //Inputkan 2 angka membentuk group 1 dibatas atas range group 1 (10)
+        //PIC : Nabil Putra Hadiyani
         /*Test Data
             N = 2
             Number = 2 12
@@ -196,6 +203,7 @@ public class NumberDifferenceTest {
         
         //Test Case 8 Path 3 
         //Inputkan 2 angka membentuk group 1 dibatas bawah range group 1 (1)
+        //PIC : Nabil Putra Hadiyani
         /*Test Data
             N = 2
             Number = 1 2
@@ -219,6 +227,7 @@ public class NumberDifferenceTest {
 	}        
         //Test Case 9 Path 4 
         //Inputkan 2 angka membentuk group 0
+        //PIC : Nabil Putra Hadiyani
         /*Test Data
             N = 2
             Number = 5 5
@@ -242,6 +251,7 @@ public class NumberDifferenceTest {
 	}
         //Test Case 10 Path 5 
         //Inputkan jumlah angka tidak valid lebih dari 10 (N)
+        //PIC : Nabil Putra Hadiyani
         /*Test Data
             N = 11
         */
@@ -261,6 +271,7 @@ public class NumberDifferenceTest {
 	}
         //Test Case 11 Path 5 
         //Inputkan jumlah angka tidak valid kurang dari 1 (N)
+        //PIC : Nabil Putra Hadiyani
         /*Test Data
             N = 0
         */
@@ -281,6 +292,7 @@ public class NumberDifferenceTest {
         
         //Test Case 12 Path 9
         //Inputkan jumlah N 1  dan masuk group 0
+        //PIC : Nabil Putra Hadiyani
         /*Test Data
             N = 1
             Number = 5
@@ -304,6 +316,7 @@ public class NumberDifferenceTest {
 	}
         //Test Case 13 Path 10
         //Input 3 angka yang memenuhi group 3
+        //PIC : Nabil Putra Hadiyani
         /*Test Data
             N = 3
             Number = 1 10 61
@@ -327,6 +340,7 @@ public class NumberDifferenceTest {
 	}
         //Test Case 14 Path 11
         //Input 3 angka yang memenuhi group 2
+        //PIC : Nabil Putra Hadiyani
         /*Test Data
             N = 3
             Number = 1 5 41
@@ -350,7 +364,7 @@ public class NumberDifferenceTest {
 	}
 
         
-//Test Case 18 Path 12 : Input 3 angka yang memenuhi group 1
+        //Test Case 18 Path 12 : Input 3 angka yang memenuhi group 1
         //PIC : Titis Sampurno
         @Test
         public void testGroup1NoDiff2Loop() {
@@ -590,34 +604,5 @@ public class NumberDifferenceTest {
             assertEquals(expectedDifference, actualDifference);
             assertEquals(expectedMessage, actualMessage);
 	}
-        
-        //Test Case 28 Path 22 : Input 11 angka yang memenuhi group 3
-        //PIC : Muhammad Syahid Abdurrahman
-      
-        
-//        //Test Case 29 Path 23 : Input 11 angka yang memenuhi group 2
-//        //PIC : Muhammad Syahid Abdurrahman
-//        @Test
-//        public void testGroup2NoDiff10Loop() {
-//            /*
-//                Data Uji
-//                N = 11
-//                Number = 1 5 2 29 13 6 4 2 4 30 41         
-//            */
-//            ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(1, 5, 2, 29, 13, 6, 4, 2, 4, 30, 41));
-//            
-//            // Expected Result
-//            String expectedMessage = "Difference : 40\nGroup 2, Medium Difference";
-//            Integer expectedDifference = 40;
-//            
-//            // Exercise Test
-//            Integer actualDifference = sut.numberDiffirenceProcess(testData);
-//            String actualMessage = sut.groupingDifference(actualDifference);
-//            
-//            // Verify Test
-//            assertEquals(expectedDifference, actualDifference);
-//            assertEquals(expectedMessage, actualMessage);
-//	}
-        
         
 }
