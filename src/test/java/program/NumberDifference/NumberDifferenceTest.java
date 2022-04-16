@@ -1,5 +1,6 @@
 package program.NumberDifference;
 
+import program.NumberDifference.CalcNUmberDifference;
 import static org.junit.Assert.*;
 
 import org.junit.Before;

@@ -1,5 +1,5 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-NumberDifference,main.java.program.NumberDifference,CalcNUmberDifference,157,13,24,3,27,4,16,3,2,2
-NumberDifference,main.java.program.NumberDifference,Screen,53,0,2,0,17,0,7,0,6,0
-NumberDifference,main.java.program.NumberDifference,NumberDifferenceFlow,48,0,2,0,15,0,3,0,2,0
-NumberDifference,main.java.program.NumberDifference,App,10,0,0,0,4,0,2,0,2,0
+NumberDifference,program.NumberDifference,CalcNUmberDifference,157,13,24,3,27,4,16,3,2,2
+NumberDifference,program.NumberDifference,NumberDifferenceFlow,48,0,2,0,15,0,3,0,2,0
+NumberDifference,program.NumberDifference,App,10,0,0,0,4,0,2,0,2,0
+NumberDifference,program.NumberDifference,Screen,53,0,2,0,17,0,7,0,6,0
