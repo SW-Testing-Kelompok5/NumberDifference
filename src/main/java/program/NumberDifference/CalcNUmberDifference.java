@@ -40,9 +40,9 @@ public class CalcNUmberDifference {
 		message = "Difference : " + diff; 
 		if(diff>50) {
 			group = 3;
-		}else if(diff>=11 && diff<50) { 
+		}else if(diff>=11 && diff<=50) { 
 			group = 2;
-		}else if(diff>=1 && diff<10){ 
+		}else if(diff>=1 && diff<=10){ 
 			group = 1;
 		}else {
 			group = 0;
@@ -51,14 +51,14 @@ public class CalcNUmberDifference {
 		if(group>0){
 			message = message + "\nGroup " + group + ", ";
 		}else{
-			message = message + "\nNon Group ";
+			message = message + "\nNon Group, ";
 		}
 		
 		switch(group) {
 			case 1: message = message + "Small Difference"; break;
 			case 2: message = message + "Medium Difference"; break;
-			case 3: message = message + "Large Differece"; break;
-			case 4: message = message + "There's no difference"; break;
+			case 3: message = message + "Large Difference"; break;
+			case 0: message = message + "There’s no difference"; break;
 		}
 		
 		return message;
@@ -69,7 +69,7 @@ public class CalcNUmberDifference {
 	// // sebaliknya mengembalikan false
 	public boolean validateRangeInputMaxDeret(int nBil) {
                 //Kesalahan code dimana seharusnya jika ingin masuk ke dalam range valid
-                //menjadi bilangan dibawah 1 dan diatas 10
+                //bilangan harus diatas 0  dan dibawah 11
               
 		if(nBil>=1 && nBil<=10) { 
 			return true;
