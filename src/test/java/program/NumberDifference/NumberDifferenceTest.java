@@ -22,34 +22,164 @@ public class NumberDifferenceTest {
 		sut = new CalcNUmberDifference();
 	}
 
-	@Test
-	public void testInputNBilLuarRange_01() {
-		// (1) setup (arrange, build)
-		int jumlahDeretBil;
-		boolean actual, expected;
-		jumlahDeretBil = 15; // bukan berada pada range 1-10
-		expected = false;
-		
-		// (2) exercise (act, operate)
-		actual = sut.validateRangeInputMaxDeret(jumlahDeretBil);
-		
-		// (3) verify (assert, check)
-		assertEquals(expected, actual);
+		//Test Case 18 Path 12 : Input 3 angka yang memenuhi group 1
+        //PIC : Titis Sampurno
+        public void testGroup1NoDiff2Loop() {
+            /*
+                Data Uji
+                N = 3
+                Number = 1 5 10
+            */
+            ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(1, 5, 10));
+            
+            // Expected Result
+            String expectedMessage = "Difference : 9\nGroup 1, Small Difference";
+            Integer expectedDifference = 9;
+            
+            // Exercise Test
+            Integer actualDifference = sut.numberDiffirenceProcess(testData);
+            String actualMessage = sut.groupingDifference(actualDifference);
+            
+            // Verify Test
+            assertEquals(expectedDifference, actualDifference);
+            assertEquals(expectedMessage, actualMessage);
 	}
-	
-	@Test
-	public void testInputNBilDalamRange_01() {
-		// (1) setup (arrange, build)
-		int jumlahDeretBil;
-		boolean actual, expected;
-		jumlahDeretBil = 5; // berada pada range 1-10
-		expected = true;
-		
-		// (2) exercise (act, operate)
-		actual = sut.validateRangeInputMaxDeret(jumlahDeretBil);
-		
-		// (3) verify (assert, check)
-		assertEquals(expected, actual);
+
+        //Test Case 19 Path 13 : Input 3 angka yang memenuhi group 0
+        //PIC : Titis Sampurno
+        public void testGroup0NoDiff2Loop() {
+            /*
+                Data Uji
+                N = 3
+                Number = 1 1 1
+            */
+            ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(1, 1, 1));
+            
+            // Expected Result
+            String expectedMessage = "Difference : 0\nNon Group, There's no difference";
+            Integer expectedDifference = 0;
+            
+            // Exercise Test
+            Integer actualDifference = sut.numberDiffirenceProcess(testData);
+            String actualMessage = sut.groupingDifference(actualDifference);
+            
+            // Verify Test
+            assertEquals(expectedDifference, actualDifference);
+            assertEquals(expectedMessage, actualMessage);
 	}
+        
+        //Test Case 20 Path 14 : Input 4 angka yang memenuhi group 3
+        //PIC : Titis Sampurno
+        public void testGroup3NoDiff3Loop() {
+            /*
+                Data Uji
+                N = 4
+                Number = 1 10 30 61
+            */
+            ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(1, 10, 30, 61));
+            
+            // Expected Result
+            String expectedMessage = "Difference : 60\nGroup 3, Large Difference";
+            Integer expectedDifference = 60;
+            
+            // Exercise Test
+            Integer actualDifference = sut.numberDiffirenceProcess(testData);
+            String actualMessage = sut.groupingDifference(actualDifference);
+            
+            // Verify Test
+            assertEquals(expectedDifference, actualDifference);
+            assertEquals(expectedMessage, actualMessage);
+	}
+        
+        //Test Case 21 Path 15 : Input 4 angka yang memenuhi group 2
+        //PIC : Titis Sampurno
+        public void testGroup2NoDiff3Loop() {
+            /*
+                Data Uji
+                N = 4
+                Number = 1 5 30 41
+            */
+            ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(1, 5, 30, 41));
+            
+            // Expected Result
+            String expectedMessage = "Difference : 40\nGroup 2, Medium Difference";
+            Integer expectedDifference = 40;
+            
+            // Exercise Test
+            Integer actualDifference = sut.numberDiffirenceProcess(testData);
+            String actualMessage = sut.groupingDifference(actualDifference);
+            
+            // Verify Test
+            assertEquals(expectedDifference, actualDifference);
+            assertEquals(expectedMessage, actualMessage);
+	}
+        
+        //Test Case 22 Path 16 : Input 4 angka yang memenuhi group 1
+        //PIC : Titis Sampurno
+        public void testGroup1NoDiff3Loop() {
+            /*
+                Data Uji
+                N = 4
+                Number = 1 5 6 10
+            */
+            ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(1, 5, 6, 10));
+            
+            // Expected Result
+            String expectedMessage = "Difference : 9\nGroup 1, Small Difference";
+            Integer expectedDifference = 9;
+            
+            // Exercise Test
+            Integer actualDifference = sut.numberDiffirenceProcess(testData);
+            String actualMessage = sut.groupingDifference(actualDifference);
+            
+            // Verify Test
+            assertEquals(expectedDifference, actualDifference);
+            assertEquals(expectedMessage, actualMessage);
+	}
+        
+        //Test Case 23 Path 17 : Input 4 angka yang memenuhi group 0
+        //PIC : Titis Sampurno
+        public void testGroup0NoDiff3Loop() {
+            /*
+                Data Uji
+                N = 4
+                Number = 1 1 1 1
+            */
+            ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(1, 1, 1, 1));
+            
+            // Expected Result
+            String expectedMessage = "Difference : 0\nNon Group, There's no difference";
+            Integer expectedDifference = 0;
+            
+            // Exercise Test
+            Integer actualDifference = sut.numberDiffirenceProcess(testData);
+            String actualMessage = sut.groupingDifference(actualDifference);
+            
+            // Verify Test
+            assertEquals(expectedDifference, actualDifference);
+            assertEquals(expectedMessage, actualMessage);
+	}
+        
+        //Test Case 24 Path 18 : Input 10 angka yang memenuhi group 3
+        //PIC : Titis Sampurno
+        public void testGroup3NoDiff9Loop() {
+            /*
+                Data Uji
+                N = 10
+                Number = 1 4 7 20 25 10 30 4 2 61
+            */
+            ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(1, 4, 7, 20, 25, 10, 30, 4, 2, 61));
+            
+            // Expected Result
+            String expectedMessage = "Difference : 60\nGroup 3, Large Difference";
+            Integer expectedDifference = 60;
+            
+            // Exercise Test
+            Integer actualDifference = sut.numberDiffirenceProcess(testData);
+            String actualMessage = sut.groupingDifference(actualDifference);
+            
+            // Verify Test
+            assertEquals(expectedDifference, actualDifference);
+            assertEquals(expectedMessage, actualMessage);
 
 }
