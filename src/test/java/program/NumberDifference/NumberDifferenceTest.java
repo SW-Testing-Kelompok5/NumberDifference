@@ -519,4 +519,105 @@ public class NumberDifferenceTest {
             assertEquals(expectedMessage, actualMessage);
 	}
 
+        //Test Case 25 Path 19 : Input 10 angka yang memenuhi group 2
+        //PIC : Muammad Syahid Abdurrahman
+        @Test
+        public void testGroup2NoDiff9Loop() {
+            /*
+                Data Uji
+                N = 10
+                Number = 1 5 2 29 13 4 2 4 30 41
+            */
+            ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(1, 5, 2, 29, 13, 4, 2, 4, 30, 41));
+            
+            // Expected Result
+            String expectedMessage = "Difference : 40\nGroup 2, Medium Difference";
+            Integer expectedDifference = 40;
+            
+            // Exercise Test
+            Integer actualDifference = sut.numberDiffirenceProcess(testData);
+            String actualMessage = sut.groupingDifference(actualDifference);
+            
+            // Verify Test
+            assertEquals(expectedDifference, actualDifference);
+            assertEquals(expectedMessage, actualMessage);
+	}
+
+        //Test Case 26 Path 20 : Input 10 angka yang memenuhi group 1
+        //PIC : Muhammad Syahid Abdurraman
+        @Test
+        public void testGroup1DiffNo9Loop() {
+            /*
+                Data Uji
+                N = 10
+                Number = 1 2 3 4 5 5 2 7 6 10
+            */
+            ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 5, 2, 7, 6, 10));
+            
+            // Expected Result
+            String expectedMessage = "Difference : 9\nGroup 1, Small Difference";
+            Integer expectedDifference = 9;
+            
+            // Exercise Test
+            Integer actualDifference = sut.numberDiffirenceProcess(testData);
+            String actualMessage = sut.groupingDifference(actualDifference);
+            
+            // Verify Test
+            assertEquals(expectedDifference, actualDifference);
+            assertEquals(expectedMessage, actualMessage);
+	}
+        
+        //Test Case 27 Path 21 : Input 10 angka yang memenuhi group 0   
+        //PIC : Muammad Syahid Abdurraman
+        @Test
+        public void testNonGroupNoDiff9Loop() {
+            /*
+                Data Uji
+                N = 10
+                Number = 1 1 1 1 1 1 1 1 1
+            */
+            ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(1, 1, 1, 1, 1, 1, 1, 1, 1, 1));
+            
+            // Expected Result
+            String expectedMessage = "Difference : 0\nNon Group, There’s no difference";
+            Integer expectedDifference = 0;
+            
+            // Exercise Test
+            Integer actualDifference = sut.numberDiffirenceProcess(testData);
+            String actualMessage = sut.groupingDifference(actualDifference);
+            
+            // Verify Test
+            assertEquals(expectedDifference, actualDifference);
+            assertEquals(expectedMessage, actualMessage);
+	}
+        
+        //Test Case 28 Path 22 : Input 11 angka yang memenuhi group 3
+        //PIC : Muhammad Syahid Abdurrahman
+      
+        
+//        //Test Case 29 Path 23 : Input 11 angka yang memenuhi group 2
+//        //PIC : Muhammad Syahid Abdurrahman
+//        @Test
+//        public void testGroup2NoDiff10Loop() {
+//            /*
+//                Data Uji
+//                N = 11
+//                Number = 1 5 2 29 13 6 4 2 4 30 41         
+//            */
+//            ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(1, 5, 2, 29, 13, 6, 4, 2, 4, 30, 41));
+//            
+//            // Expected Result
+//            String expectedMessage = "Difference : 40\nGroup 2, Medium Difference";
+//            Integer expectedDifference = 40;
+//            
+//            // Exercise Test
+//            Integer actualDifference = sut.numberDiffirenceProcess(testData);
+//            String actualMessage = sut.groupingDifference(actualDifference);
+//            
+//            // Verify Test
+//            assertEquals(expectedDifference, actualDifference);
+//            assertEquals(expectedMessage, actualMessage);
+//	}
+        
+        
 }
