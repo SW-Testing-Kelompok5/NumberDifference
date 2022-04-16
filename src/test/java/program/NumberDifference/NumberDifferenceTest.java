@@ -533,7 +533,8 @@ public class NumberDifferenceTest {
             assertEquals(expectedMessage, actualMessage);
 	}
 
-        //Test Case 25 Path 19 : Input 10 angka yang memenuhi group 2
+        //Test Case 25 Path 19  
+        //Input 10 angka yang memenuhi group 2
         //PIC : Muammad Syahid Abdurrahman
         @Test
         public void testGroup2NoDiff9Loop() {
@@ -557,7 +558,8 @@ public class NumberDifferenceTest {
             assertEquals(expectedMessage, actualMessage);
 	}
 
-        //Test Case 26 Path 20 : Input 10 angka yang memenuhi group 1
+        //Test Case 26 Path 20
+        //Input 10 angka yang memenuhi group 1
         //PIC : Muhammad Syahid Abdurraman
         @Test
         public void testGroup1DiffNo9Loop() {
@@ -581,7 +583,8 @@ public class NumberDifferenceTest {
             assertEquals(expectedMessage, actualMessage);
 	}
         
-        //Test Case 27 Path 21 : Input 10 angka yang memenuhi group 0   
+        //Test Case 27 Path 21
+        //Input 10 angka yang memenuhi group 0   
         //PIC : Muammad Syahid Abdurraman
         @Test
         public void testNonGroupNoDiff9Loop() {
